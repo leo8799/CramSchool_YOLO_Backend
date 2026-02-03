@@ -46,12 +46,19 @@ Follow these steps to set up your environment:
 conda create -n doclayout_yolo python=3.10
 conda activate doclayout_yolo
 pip install -e .
+pip install flask
+pip install flask_cors
 ```
 
 **Note:** If you only need the package for inference, you can simply install it via pip:
 
 ```bash
 pip install doclayout-yolo
+```
+### web start
+
+```bash
+nohup python web.py > yolo.log 2>&1 &
 ```
 
 ### 2. Prediction
